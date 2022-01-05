@@ -61,7 +61,7 @@ fi
 dnl ************************************************
 dnl *** Check for Lapack library
 dnl ************************************************
-AC_PROG_F77
+#AC_PROG_F77
 
 AC_ARG_WITH([lapack],
   [AS_HELP_STRING([--without-lapack],
