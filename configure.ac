@@ -1,9 +1,9 @@
-AC_INIT([necpp], [1.7.4])
+AC_INIT([necpp],[1.7.4])
 AC_CONFIG_AUX_DIR([m4])
 AC_CONFIG_MACRO_DIR([config/m4])
 AM_CONFIG_HEADER(config.h)
 AM_INIT_AUTOMAKE([foreign subdir-objects])
-AM_PROG_LIBTOOL
+LT_INIT
 AM_SILENT_RULES([yes])
 LT_INIT
 
@@ -87,9 +87,9 @@ dnl ************************************************
 dnl *** Check for Eigen library
 dnl ************************************************
 
-AC_LANG_CPLUSPLUS
+AC_LANG([C++])
 AC_PROG_CXX
-AM_PROG_LIBTOOL
+LT_INIT
 
 
 AC_ARG_WITH([eigen],
@@ -135,5 +135,6 @@ PRIVATE_LIBS=" $LDFLAGS -lstdc++ -llapack -lblas -lpthread -lm"
 AC_SUBST(EXPLICIT_LIBS)
 AC_SUBST(PRIVATE_LIBS)
 
-AC_OUTPUT(Makefile src/Makefile necpp.pc)
+AC_CONFIG_FILES([Makefile src/Makefile necpp.pc])
+AC_OUTPUT
 
