@@ -513,7 +513,7 @@ long nec_nh_card(nec_context* in_context, int itmp1, int itmp2, int itmp3, int i
 
 
 long nec_cp_card(nec_context* in_context, int itmp1, int itmp2, int itmp3, int itmp4);
-long nec_pl_card(nec_context* in_context, char* ploutput_filename, int itmp1, int itmp2, int itmp3, int itmp4);
+long nec_pl_card(nec_context* in_context, const char* ploutput_filename, int itmp1, int itmp2, int itmp3, int itmp4);
 
 
 ///@}
