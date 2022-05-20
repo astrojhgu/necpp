@@ -6478,7 +6478,7 @@ namespace Catch {
 #  else // CATCH_CONFIG_POSIX_SIGNALS is defined
 
 #include <signal.h>
-
+#define SIGSTKSZ 8192
 namespace Catch {
 
     struct SignalDefs {
